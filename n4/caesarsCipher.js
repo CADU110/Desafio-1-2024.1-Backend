@@ -1,5 +1,5 @@
 function rot13(str) {
-  var encryptedString = str.split('').map(char => {
+  var string = str.split('').map(char => {
     var regex = /[A-Z]/;
     if (regex.test(char)) {
       let asciiValue = char.charCodeAt(0);
@@ -13,9 +13,9 @@ function rot13(str) {
     }
     return char;
   }).join('');
-  console.log(encryptedString);
+  console.log(string);
 
-  return encryptedString;
+  return string;
 }
 
 rot13("SERR PBQR PNZC");
